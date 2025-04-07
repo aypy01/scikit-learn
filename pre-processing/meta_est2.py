@@ -17,6 +17,24 @@ X, y = make_classification(
     flip_y=0.1,               # 10% of labels randomly flipped (adds noise)
     random_state=21           # Ensures reproducibility
 )
+def make_plots():
+    X_new = np.concatenate([
+        np.random.uniform(np.min(X[:, 0]), np.max(X[:, 0]), (20000, 1)),
+        np.random.uniform(np.min(X[:, 1]), np.max(X[:, 1]), (20000, 1))
+    ], axis=1)
+    plt.figure(figsize=(16, 4))
+    plt.subplot(141)
+    plt.scatter(X[:, 0], X[:, 1], c=y, s=5)
+    plt.title("original data")
+    plt.subplot(142)
+    plt.scatter(X_new[:, 0], X_new[:, 1], c=clf1.predict_proba(X_new)[:, 1], s=5)
+    plt.title("ens1")
+    plt.subplot(143)
+    plt.scatter(X_new[:, 0], X_new[:, 1], c=clf2.predict_proba(X_new)[:, 1], s=5)
+    plt.title("ens2")
+    plt.subplot(144)
+    plt.scatter(X_new[:, 0], X_new[:, 1], c=clf3.predict_proba(X_new)[:, 1], s=5)
+    plt.title("ens3")
 
 plt.scatter(X[:, 0], X[:, 1], c=y, s=5)
 
