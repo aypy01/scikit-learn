@@ -1,0 +1,67 @@
+
+                           Scikit-learn Supervised Learning
+                           ├── Data Handling
+                           │   ├── Load CSV (pandas)
+                           │   ├── Features (X) vs Target (y)
+                           │   └── Inspect (head, describe, info)
+                           │
+                           ├── Preprocessing
+                           │   ├── Scaling
+                           │   │   ├── StandardScaler
+                           │   │   ├── MinMaxScaler
+                           │   │   └── RobustScaler
+                           │   ├── QuantileTransformer (handle outliers)
+                           │   └── Encoding (LabelEncoder, OneHotEncoder)
+                           │
+                           ├── Dataset Split
+                           │   ├── Train-Test Split
+                           │   └── Cross-Validation (KFold, StratifiedKFold)
+                           │
+                           ├── Model Selection
+                           │   ├── Linear Models
+                           │   │   ├── Linear Regression
+                           │   │   ├── Logistic Regression
+                           │   │   └── Perceptron
+                           │   ├── SVM
+                           │   ├── KNN
+                           │   ├── Decision Trees
+                           │   ├── Random Forest
+                           │   ├── Gradient Boosting
+                           │   └── Others (Naive Bayes, etc.)
+                           │
+                           ├── Model Training
+                           │   ├── .fit(X_train, y_train)
+                           │   ├── .predict(X_test)
+                           │   └── .score / metrics
+                           │
+                           ├── Metrics
+                           │   ├── Classification
+                           │   │   ├── Accuracy
+                           │   │   ├── Precision
+                           │   │   ├── Recall
+                           │   │   └── F1-score
+                           │   └── Regression
+                           │       ├── MSE
+                           │       ├── RMSE
+                           │       └── R²
+                           │
+                           ├── Pipelines
+                           │   ├── Combine preprocessing + model
+                           │   └── Avoid data leakage
+                           │
+                           ├── Model Tuning
+                           │   ├── GridSearchCV
+                           │   └── RandomizedSearchCV
+                           │
+                           ├── Model Persistence
+                           │   ├── joblib
+                           │   └── pickle
+                           │
+                           └── Special Cases
+                               ├── Time Series
+                               │   ├── TimeSeriesSplit
+                               │   └── Decay weighting (recent > old)
+                               └── Meta-Estimators
+                                   ├── Bagging
+                                   ├── Boosting
+                                   └── Stacking
